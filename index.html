@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>一天重塑人生 · 精读学习指南 | Fix Your Life in One Day — Bilingual Study Guide</title>
 <meta name="description" content="Dan Koe 长文的精读学习指南：用自己的话概括七个核心观点，中英对照、重点词汇短语讲解、互动练习与一日行动手册，帮助英语学习者读懂并用起来。原文请见 X 原帖。">
 <meta property="og:title" content="一天重塑人生 · 精读学习指南">
@@ -15,8 +15,10 @@
   --serif:Georgia,"Songti SC","Noto Serif SC",serif; --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html,body{overflow-x:hidden}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.75}
+img,svg,video{max-width:100%}
 body.dark{--bg:#111827;--paper:#1f2937;--ink:#f3f4f6;--muted:#9ca3af;--line:#374151;--card:#1e293b;--soft:#78350f;--shadow:0 10px 30px rgba(0,0,0,.4)}
 body.sepia{--bg:#f4ecd8;--paper:#fdf6e3;--ink:#433422;--muted:#8a7a5f;--line:#e3d5b3;--card:#fffaf0;--soft:#fde68a}
 a{color:var(--accent2)}
@@ -104,6 +106,61 @@ textarea{width:100%;min-height:88px;border:1px solid var(--line);border-radius:1
 footer{color:var(--muted);font-size:13.5px;text-align:center;margin-top:28px}
 .toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
 .hidden{display:none!important}
+#tocToggle{display:none}
+/* ===== Mobile: 860px and below ===== */
+@media(max-width:860px){
+  .topbar-in{padding:8px 12px;gap:8px;flex-wrap:nowrap}
+  .brand{font-size:15px;white-space:nowrap;flex:none}
+  .brand small{display:none}
+  .topbar .spacer{display:none}
+  .toolbar{flex:1;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding-bottom:2px}
+  .toolbar::-webkit-scrollbar{display:none}
+  .toolbar .btn{flex:none;padding:7px 11px;min-height:36px;white-space:nowrap}
+  .wrap{padding:0 14px 64px;min-width:0}
+  .grid2{min-width:0}
+  .grid2>*{min-width:0}
+  main{min-width:0}
+  section.chapter{min-width:0;overflow-x:hidden}
+  .hero{margin:16px 0 14px;border-radius:18px}
+  .hero-in{padding:22px 18px 18px;gap:16px}
+  h1{font-size:clamp(28px,8vw,36px)}
+  .lede{font-size:16px}
+  .grid2{gap:14px}
+  /* TOC: collapsed by default on mobile, tap to expand */
+  .toc{position:static;padding:12px 14px}
+  .toc h3{display:none}
+  #tocToggle{display:flex;width:100%;justify-content:space-between;align-items:center;border:0;background:none;font:inherit;font-weight:800;font-size:15px;color:var(--ink);padding:6px 2px;min-height:44px;cursor:pointer}
+  #tocToggle .chev{transition:transform .25s}
+  .toc .toc-body{display:none}
+  .toc.open .toc-body{display:block}
+  .toc.open #tocToggle .chev{transform:rotate(180deg)}
+  .toc a{padding:11px 8px;min-height:44px;align-items:center}
+  section.chapter{padding:20px 18px 16px;scroll-margin-top:64px;border-radius:16px}
+  .chapter h2{font-size:23px}
+  .chapter h2 .en-title{font-size:14px}
+  .para .en{font-size:16px}
+  .exercise{padding:16px 14px}
+  details.vocab summary{min-height:44px}
+  .vword{min-height:44px}
+  .btn{min-height:40px}
+  /* Diagrams: never shrink text to unreadable size — scroll sideways instead */
+  .diagram{overflow-x:auto;-webkit-overflow-scrolling:touch;text-align:left;padding:12px;min-width:0;max-width:100%}
+  .diagram svg{min-width:560px;display:block;margin:0 auto}
+  .diagram figcaption{text-align:center}
+  .diagram::before{content:"👉 左右滑动查看完整图";display:block;text-align:center;font-size:12px;color:var(--muted);margin-bottom:8px}
+  .cover-art svg{min-width:0}
+}
+/* ===== Small phones: 520px and below ===== */
+@media(max-width:520px){
+  .alarm-grid{grid-template-columns:1fr}
+  .flash{grid-template-columns:1fr}
+  .vocab-list{grid-template-columns:1fr}
+  .card3d{height:132px}
+  .meta .chip{font-size:12px}
+  .check input{width:22px;height:22px}
+  textarea{font-size:16px} /* prevents iOS auto-zoom on focus */
+  .quiz-q button{padding:12px;min-height:44px}
+}
 </style>
 </head>
 <body class="lang-both">
@@ -155,6 +212,8 @@ footer{color:var(--muted);font-size:13.5px;text-align:center;margin-top:28px}
 
   <div class="grid2">
     <aside class="toc" aria-label="目录">
+      <button id="tocToggle" type="button" aria-expanded="false"><span>📑 目录 · 已读 <span id="tocPct">0%</span></span><span class="chev">▾</span></button>
+      <div class="toc-body">
       <h3>目录 Contents</h3>
       <div><span class="pct" id="pct">0%</span> <small>已读进度</small></div>
       <div style="height:8px;background:var(--line);border-radius:99px;overflow:hidden;margin:8px 0 12px"><div id="pctBar" style="height:100%;width:0%;background:var(--accent2)"></div></div>
@@ -168,6 +227,7 @@ footer{color:var(--muted);font-size:13.5px;text-align:center;margin-top:28px}
       <a href="#vocab"><span><span class="n">★</span> 词汇闪卡</span><span>→</span></a>
       <a href="#quiz"><span><span class="n">★</span> 小测验</span><span>→</span></a>
       <a href="#plan"><span><span class="n">★</span> 我的行动手册</span><span>→</span></a>
+      </div>
     </aside>
 
     <main>
@@ -359,7 +419,9 @@ document.getElementById('themeBtn').onclick=()=>{if(document.body.classList.cont
 function save(k,v){try{localStorage.setItem('fixlife-'+k,v)}catch(e){}}
 function load(k){try{return localStorage.getItem('fixlife-'+k)}catch(e){return null}}
 const boxes=[...document.querySelectorAll('.done')];
-function updatePct(){const d=boxes.filter(b=>b.checked).length;const p=Math.round(d/boxes.length*100);document.getElementById('pct').textContent=p+'%';document.getElementById('pctBar').style.width=p+'%';save('done',JSON.stringify(boxes.map(b=>b.checked)))}
+function updatePct(){const d=boxes.filter(b=>b.checked).length;const p=Math.round(d/boxes.length*100);document.getElementById('pct').textContent=p+'%';document.getElementById('pctBar').style.width=p+'%';const tp=document.getElementById('tocPct');if(tp)tp.textContent=p+'%';save('done',JSON.stringify(boxes.map(b=>b.checked)))}
+document.getElementById('tocToggle').onclick=()=>{const t=document.querySelector('.toc');t.classList.toggle('open');document.getElementById('tocToggle').setAttribute('aria-expanded',t.classList.contains('open'))};
+document.querySelectorAll('.toc a').forEach(a=>a.addEventListener('click',()=>{if(innerWidth<=860)document.querySelector('.toc').classList.remove('open')}));
 boxes.forEach(b=>b.onchange=updatePct);
 try{const s=JSON.parse(load('done')||'[]');boxes.forEach((b,i)=>b.checked=!!s[i])}catch(e){}
 updatePct();
