@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>一天重塑人生 · 精读学习指南 | Fix Your Life in One Day — Bilingual Study Guide</title>
+<meta name="description" content="Dan Koe 长文的精读学习指南：用自己的话概括七个核心观点，中英对照、重点词汇短语讲解、互动练习与一日行动手册，帮助英语学习者读懂并用起来。原文请见 X 原帖。">
+<meta property="og:title" content="一天重塑人生 · 精读学习指南">
+<meta property="og:description" content="中英对照 · 词汇讲解 · 互动练习 · 一日行动手册 — 给英语学习者的精读版">
+<style>
+:root{
+  --bg:#f7f3ea; --paper:#fffdf7; --ink:#1f2937; --muted:#6b7280; --line:#e7dfcd;
+  --accent:#c2410c; --accent2:#0f766e; --gold:#b45309; --card:#ffffff; --soft:#fef3c7;
+  --shadow:0 10px 30px rgba(31,41,55,.08); --radius:18px;
+  --serif:Georgia,"Songti SC","Noto Serif SC",serif; --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.75}
+body.dark{--bg:#111827;--paper:#1f2937;--ink:#f3f4f6;--muted:#9ca3af;--line:#374151;--card:#1e293b;--soft:#78350f;--shadow:0 10px 30px rgba(0,0,0,.4)}
+body.sepia{--bg:#f4ecd8;--paper:#fdf6e3;--ink:#433422;--muted:#8a7a5f;--line:#e3d5b3;--card:#fffaf0;--soft:#fde68a}
+a{color:var(--accent2)}
+.progress{position:fixed;top:0;left:0;height:4px;background:linear-gradient(90deg,var(--accent),var(--gold));width:0%;z-index:99}
+.topbar{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.topbar-in{max-width:1080px;margin:auto;padding:10px 18px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.brand{font-weight:800;letter-spacing:.02em}.brand small{display:block;font-weight:500;color:var(--muted);font-size:12px}
+.topbar .spacer{flex:1}
+button,.pill{font-family:inherit;cursor:pointer}
+.btn{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:7px 12px;font-size:13px}
+.btn.active{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.btn.primary{background:var(--accent);color:#fff;border-color:var(--accent);font-weight:700}
+.wrap{max-width:1080px;margin:auto;padding:0 18px 80px}
+.hero{margin:28px 0 18px;background:linear-gradient(135deg,#fff7ed,#ecfdf5);border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:var(--shadow)}
+body.dark .hero{background:linear-gradient(135deg,#312e81,#134e4a)}
+.hero-in{padding:34px 30px 26px;display:grid;grid-template-columns:1.25fr .75fr;gap:24px}
+@media(max-width:760px){.hero-in{grid-template-columns:1fr}}
+.kicker{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:800}
+h1{font-family:var(--serif);font-size:clamp(32px,5vw,54px);line-height:1.12;margin:10px 0 8px}
+h1 .en{display:block;font-size:.55em;color:var(--muted);font-family:var(--sans);font-weight:600;margin-top:8px;line-height:1.4}
+.lede{font-size:17px;color:#374151}body.dark .lede{color:#d1d5db}
+.meta{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}
+.chip{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:5px 10px;font-size:12.5px}
+.cover-art{border-radius:16px;background:#fff;border:1px solid var(--line);padding:14px}
+.cover-art svg{width:100%;height:auto;display:block}
+.notice{background:#fffbeb;border:1px solid #fcd34d;border-radius:14px;padding:14px 16px;font-size:14px;margin:18px 0}
+body.dark .notice{background:#422006;border-color:#92400e}
+.grid2{display:grid;grid-template-columns:280px 1fr;gap:22px;align-items:start}
+@media(max-width:860px){.grid2{grid-template-columns:1fr}}
+.toc{position:sticky;top:76px;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+.toc h3{margin:0 0 10px;font-size:14px}
+.toc a{display:flex;justify-content:space-between;gap:8px;text-decoration:none;color:var(--ink);padding:9px 8px;border-radius:10px;font-size:14px}
+.toc a:hover{background:var(--soft)}
+.toc a span.n{color:var(--accent);font-weight:800}
+.toc .pct{font-size:28px;font-weight:800}.toc .pct small{font-size:13px;color:var(--muted);font-weight:500}
+section.chapter{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:26px 26px 22px;margin:0 0 20px;box-shadow:var(--shadow);scroll-margin-top:84px}
+.chapter .num{font-size:12px;letter-spacing:.16em;color:var(--accent);font-weight:800;text-transform:uppercase}
+.chapter h2{font-family:var(--serif);font-size:28px;line-height:1.3;margin:8px 0 4px}
+.chapter h2 .en-title{display:block;font-family:var(--sans);font-size:15px;color:var(--muted);font-weight:600;margin-top:6px}
+.idea{background:linear-gradient(90deg,#fff7ed,transparent);border-left:4px solid var(--accent);padding:12px 14px;border-radius:0 12px 12px 0;margin:16px 0}
+body.dark .idea{background:#292524}
+.idea b{color:var(--accent)}
+.para{margin:14px 0}
+.para .en{font-size:16.5px}
+.para .zh{color:#4b5563;font-size:15px;margin-top:4px}body.dark .para .zh{color:#d1d5db}
+body.lang-en .zh{display:none} body.lang-zh .en{display:none}
+body.lang-zh .en-title{display:none}
+details.vocab{border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin:10px 0;background:var(--card)}
+details.vocab summary{cursor:pointer;font-weight:700}
+details.vocab summary::marker{color:var(--accent)}
+.vocab-list{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+@media(max-width:640px){.vocab-list{grid-template-columns:1fr}}
+.vword{border:1px solid var(--line);border-radius:12px;padding:10px 12px;cursor:pointer}
+.vword:hover{border-color:var(--accent)}
+.vword .w{font-weight:800}.vword .w i{font-weight:400;color:var(--muted);font-size:13px}
+.vword .def{font-size:13.5px;color:var(--muted);display:none;margin-top:4px}
+.vword.open .def{display:block}
+.vword .ex{font-size:13px;margin-top:6px;display:none}.vword.open .ex{display:block}
+.speak{border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:2px 8px;font-size:12px;margin-left:6px}
+.quote-card{background:var(--soft);border-radius:14px;padding:14px 16px;margin:14px 0;font-size:14.5px}
+.diagram{background:#f8fafc;border:1px dashed #cbd5e1;border-radius:16px;padding:16px;margin:16px 0;text-align:center}
+body.dark .diagram{background:#0f172a}
+.diagram svg{max-width:100%;height:auto}
+.diagram figcaption{font-size:13px;color:var(--muted);margin-top:8px}
+.check{display:flex;gap:10px;align-items:flex-start;background:#ecfdf5;border:1px solid #a7f3d0;border-radius:12px;padding:12px 14px;margin-top:16px}
+body.dark .check{background:#052e16}
+.check input{width:20px;height:20px;margin-top:3px;accent-color:var(--accent2)}
+.exercise{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;margin:16px 0}
+.exercise h4{margin:0 0 8px}
+textarea{width:100%;min-height:88px;border:1px solid var(--line);border-radius:12px;padding:12px;font:inherit;font-size:14.5px;background:var(--paper);color:var(--ink);resize:vertical}
+.alarm-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+@media(max-width:640px){.alarm-grid{grid-template-columns:1fr 1fr}}
+.alarm{border:1px solid var(--line);border-radius:14px;padding:12px;background:var(--card)}
+.alarm b{font-size:22px;color:var(--accent2)}
+.flash{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media(max-width:760px){.flash{grid-template-columns:1fr 1fr}}
+.card3d{perspective:800px;height:150px;cursor:pointer}
+.card3d-in{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .5s}
+.card3d.flipped .card3d-in{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:14px;border-radius:16px;border:1px solid var(--line);background:var(--card);backface-visibility:hidden}
+.face.back{transform:rotateY(180deg);background:#fff7ed}body.dark .face.back{background:#292524}
+.quiz-q{border:1px solid var(--line);border-radius:14px;padding:14px;margin:12px 0}
+.quiz-q button{display:block;width:100%;text-align:left;margin:6px 0;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--paper);color:var(--ink)}
+.quiz-q button.correct{background:#dcfce7;border-color:#16a34a}.quiz-q button.wrong{background:#fee2e2;border-color:#dc2626}
+footer{color:var(--muted);font-size:13.5px;text-align:center;margin-top:28px}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.hidden{display:none!important}
+</style>
+</head>
+<body class="lang-both">
+<div class="progress" id="progress"></div>
+<header class="topbar"><div class="topbar-in">
+  <div class="brand">📖 一天重塑人生<small>精读学习指南 · Bilingual Study Guide</small></div>
+  <div class="spacer"></div>
+  <div class="toolbar" role="group" aria-label="阅读设置">
+    <button class="btn active" data-lang="both">中英对照</button>
+    <button class="btn" data-lang="en">English only</button>
+    <button class="btn" data-lang="zh">仅中文</button>
+    <button class="btn" id="fontMinus" aria-label="减小字号">A−</button>
+    <button class="btn" id="fontPlus" aria-label="增大字号">A＋</button>
+    <button class="btn" id="themeBtn">🌙 深色 / 米色</button>
+  </div>
+</div></header>
+
+<div class="wrap">
+  <div class="hero"><div class="hero-in">
+    <div>
+      <div class="kicker">Dan Koe · X Article · 2026-01-13 · 精读版</div>
+      <h1>一天，重塑你的人生<span class="en">Fix Your Life in One Day — a study guide for English learners</span></h1>
+      <p class="lede">这不是原文转载，而是一本<b>精读学习书</b>：我把一篇很长的英文长文拆成 7 个小节，用更简单的英文重新讲清楚每个观点，再配中文翻译、重点词汇和一日行动手册。读完能懂意思，也能学到表达。</p>
+      <div class="meta"><span class="chip">⏱ 约 25 分钟读完</span><span class="chip">🧩 7 章 · 3 个练习</span><span class="chip">📝 28 个重点词</span><span class="chip">🎮 一日行动手册</span></div>
+      <p><a class="btn primary" href="https://x.com/thedankoe/status/2010751592346030461" target="_blank" rel="noopener">🔗 去 X 读原文 →</a>
+      <button class="btn" onclick="document.getElementById('how').scrollIntoView({behavior:'smooth'})">先看怎么用 ↓</button></p>
+      <p style="font-size:13px;color:var(--muted)">作者：Dan Koe（@thedankoe）· 原文发表于 2026 年 1 月 13 日。本页为学习笔记与概括，观点归原作者所有；想引用原文请以 X 链接为准。</p>
+    </div>
+    <div class="cover-art" aria-label="概念插图：从旧身份到新身份">
+      <svg viewBox="0 0 320 260" role="img" aria-label="从旧我到新我的阶梯图">
+        <defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f97316"/><stop offset="1" stop-color="#0f766e"/></linearGradient></defs>
+        <rect x="10" y="10" width="300" height="240" rx="16" fill="#fff7ed"/>
+        <text x="20" y="38" font-size="15" font-weight="700" fill="#1f2937">OLD YOU → NEW YOU</text>
+        <text x="20" y="58" font-size="12" fill="#6b7280">先换身份，再换行动</text>
+        <path d="M30 210 L110 160 L190 115 L285 55" stroke="url(#g1)" stroke-width="5" fill="none" stroke-linecap="round"/>
+        <circle cx="30" cy="210" r="10" fill="#9ca3af"/><circle cx="110" cy="160" r="10" fill="#f59e0b"/><circle cx="190" cy="115" r="10" fill="#0ea5e9"/><circle cx="285" cy="55" r="12" fill="#0f766e"/>
+        <text x="18" y="232" font-size="11" fill="#6b7280">旧习惯</text><text x="92" y="182" font-size="11" fill="#6b7280">觉察</text><text x="168" y="137" font-size="11" fill="#6b7280">新目标</text><text x="238" y="38" font-size="11" fill="#0f766e">新身份 ★</text>
+        <rect x="20" y="82" width="130" height="34" rx="10" fill="#fff" stroke="#e5e7eb"/><text x="30" y="104" font-size="12" fill="#374151">🎯 目标 → 注意力</text>
+        <rect x="170" y="150" width="130" height="34" rx="10" fill="#fff" stroke="#e5e7eb"/><text x="180" y="172" font-size="12" fill="#374151">🔁 行动 → 反馈</text>
+      </svg>
+      <p style="font-size:12.5px;color:var(--muted);margin:8px 2px 0">图：这本书的核心就一句话 —— <b>先成为那个人，行动会自然跟上。</b></p>
+    </div>
+  </div></div>
+
+  <div class="notice" id="how"><b>📚 怎么用这本书（30 秒）</b><br>
+  ① 顶部可以切换 <b>中英对照 / 纯英文 / 仅中文</b>，先对照读，再试着只读英文。<br>
+  ② 点每个生词卡片展开中文意思和例句，点 🔊 可以听发音（用浏览器自带语音）。<br>
+  ③ 每章读完勾选 ✅，进度条和目录会同步。最后有词汇闪卡、小测验和一日行动手册，写下来的答案只保存在你自己的浏览器里。</div>
+
+  <div class="grid2">
+    <aside class="toc" aria-label="目录">
+      <h3>目录 Contents</h3>
+      <div><span class="pct" id="pct">0%</span> <small>已读进度</small></div>
+      <div style="height:8px;background:var(--line);border-radius:99px;overflow:hidden;margin:8px 0 12px"><div id="pctBar" style="height:100%;width:0%;background:var(--accent2)"></div></div>
+      <a href="#c1"><span><span class="n">01</span> 先换身份</span><span>☐</span></a>
+      <a href="#c2"><span><span class="n">02</span> 你真正想要什么</span><span>☐</span></a>
+      <a href="#c3"><span><span class="n">03</span> 害怕改变</span><span>☐</span></a>
+      <a href="#c4"><span><span class="n">04</span> 心智的九个阶段</span><span>☐</span></a>
+      <a href="#c5"><span><span class="n">05</span> 聪明 = 掌舵</span><span>☐</span></a>
+      <a href="#c6"><span><span class="n">06</span> 一日重启计划</span><span>☐</span></a>
+      <a href="#c7"><span><span class="n">07</span> 人生是一场游戏</span><span>☐</span></a>
+      <a href="#vocab"><span><span class="n">★</span> 词汇闪卡</span><span>→</span></a>
+      <a href="#quiz"><span><span class="n">★</span> 小测验</span><span>→</span></a>
+      <a href="#plan"><span><span class="n">★</span> 我的行动手册</span><span>→</span></a>
+    </aside>
+
+    <main>
+
+      <!-- CHAPTER 1 -->
+      <section class="chapter" id="c1">
+        <div class="num">Chapter 01 · 身份先行</div>
+        <h2>先换身份，再换行动<span class="en-title">Change who you are first — actions will follow</span></h2>
+        <div class="idea"><b>一句话核心：</b><span class="en"> You do not really “change” your life. You create a new life from a new identity.</span><span class="zh"> 你不是在“改变”人生，而是在用一个新的身份，创造一个新的人生。</span></div>
+        <div class="para"><p class="en">Many people make New Year’s resolutions, get excited for a few weeks, and then stop. They try to change what they do, but they do not change who they are. So the old habits come back — the weight, the spending, the low confidence.</p><p class="zh">很多人立下新年目标，兴奋几周就放弃了。他们只想改变“做什么”，却没有改变“自己是谁”。于是旧习惯又回来了 —— 体重、 spending（花钱方式）、自信心都回到原点。</p></div>
+        <div class="para"><p class="en">Think of a fit person, a focused founder, or an artist who loves their work. They do not need to force themselves every day. Healthy food, deep work, and daily practice are simply part of who they are.</p><p class="zh">想想一个身材很好的人、一个专注的创业者，或一个热爱创作的艺术家。他们不需要每天逼自己。健康饮食、深度工作、每天练习，本来就是他们生活的一部分。</p></div>
+        <div class="para"><p class="en">So the order matters: first become the kind of person who would naturally do those things. Then the results follow — slowly, but surely.</p><p class="zh">所以顺序很重要：先成为那种“会自然做这些事的人”，结果会慢慢跟上来。</p></div>
+        <details class="vocab" open><summary>🔑 本章重点词 · 点开展开</summary><div class="vocab-list">
+          <div class="vword" onclick="this.classList.toggle('open')"><span class="w">identity <i>/aɪˈdentəti/ · n.</i></span><button class="speak" onclick="event.stopPropagation();speak('identity')">🔊</button><div class="def">身份；自我认同 — 你认为自己是怎样的人。</div><div class="ex">例：My identity is “a person who writes every day.”</div></div>
+          <div class="vword" onclick="this.classList.toggle('open')"><span class="w">resolution <i>/ˌrezəˈluːʃn/ · n.</i></span><button class="speak" onclick="event.stopPropagation();speak('resolution')">🔊</button><div class="def">决心；新年目标。New Year’s resolution = 新年立下的目标。</div><div class="ex">例：My resolution is to read 12 books this year.</div></div>
+          <div class="vword" onclick="this.classList.toggle('open')"><span class="w">discipline <i>/ˈdɪsəplɪn/ · n.</i></span><button class="speak" onclick="event.stopPropagation();speak('discipline')">🔊</button><div class="def">自律；纪律。不是靠意志力硬撑，而是变成习惯。</div><div class="ex">例：Discipline is doing it even on a bad day.</div></div>
+          <div class="vword" onclick="this.classList.toggle('open')"><span class="w">move the needle <i>· phrase</i></span><button class="speak" onclick="event.stopPropagation();speak('move the needle')">🔊</button><div class="def">真正推动进展；带来实质改变。needle 是仪表盘上的指针。</div><div class="ex">例：Does this task move the needle, or just keep me busy?</div></div>
+        </div></details>
+        <div class="quote-card">💡 <b>换个说法练英语：</b><span class="en"> Don’t ask “How can I lose 30 pounds?” Ask “What would a healthy person do today?”</span><span class="zh"> 别问“我怎么减掉 30 磅？”要问“一个健康的人今天会做什么？”</span></div>
+        <label class="check"><input type="checkbox" class="done" data-ch="c1"><span><b>我读完了第 1 章。</b><span class="en"> I finished Chapter 1.</span><br><span style="color:var(--muted);font-size:13.5px">写一句你的新身份：I am the type of person who ______.</span></span></label>
+      </section>
+
+      <!-- CHAPTER 2 -->
+      <section class="chapter" id="c2">
+        <div class="num">Chapter 02 · 看清真正的目标</div>
+        <h2>你嘴上说的，不一定是心里想要的<span class="en-title">Your real goal may be hidden behind your words</span></h2>
+        <div class="idea"><b>一句话核心：</b><span class="en"> All behaviour has a goal — even when you do not notice it. Real change means changing those hidden goals.</span><span class="zh"> 所有行为背后都有一个目标，哪怕你自己没意识到。真正的改变，是换掉那些藏起来的目标。</span></div>
+        <div class="para"><p class="en">You walk forward because you want to arrive somewhere. You scratch because you want the itch to stop. Most goals are this clear. But many goals are unconscious.</p><p class="zh">你往前走，是因为想去某个地方；你挠痒，是因为想让痒停下来。大多数目标就是这么直接。但很多目标是无意识的。</p></div>
+        <div class="para"><p class="en">For example, you say you need a break, but you are really trying to escape discomfort. You say you want to quit a boring job, but your actions say you want to stay safe. The excuse sounds kind — “I need the money” or “I need rest” — but it can hide the truth from yourself.</p><p class="zh">比如你说“我需要休息一下”，其实是想逃避不舒服的感觉；你说想辞掉无聊的工作，行动却说你想待在安全区。借口听起来很合理 —— “我需要钱”“我需要休息” —— 但它可能是在骗自己。</p></div>
+        <div class="para"><p class="en">So do not only watch your words. Watch your movement. What you do every day shows what you truly want.</p><p class="zh">所以别只听自己说了什么，要看自己做了什么。你每天的行动，才说明你真正想要什么。</p></div>
+        <details class="vocab"><summary>🔑 本章重点词</summary><div class="vocab-list">
+          <div class="vword" onclick="this.classList.toggle('open')"><span class="w">procrastinate <i>/prəˈkræstɪneɪt/ · v.</i></span><button class="speak" onclick="event.stopPropagation();speak('procrastinate')">🔊</button><div class="def">拖延。procrastination 是名词。</div><div class="ex">例：I procrastinate when a task feels hard.</div></div>
+          <div class="vword" onclick="this.classList.toggle('open')"><span class="w">unconscious <i>/ʌnˈkɒnʃəs/ · adj.</i></span><button class="speak" onclick="event.stopPropagation();speak('unconscious')">🔊</button><div class="def">无意识的；没察觉到的。反义词 conscious（有意识的）。</div><div class="ex">例：It was an unconscious habit.</div></div>
+          <div class="vword" onclick="this.classList.toggle('open')"><span class="w">self-deception <i>· n.</i></span><button class="speak" onclick="event.stopPropagation();speak('self-deception')">🔊</button><div class="def">自欺欺人。deceive = 欺骗，self- = 对自己。</div><div class="ex">例：“I’m just resting” can be self-deception.</div></div>
+          <div class="vword" onclick="this.classList.toggle('open')"><span class="w">justify <i>/ˈdʒʌstɪfaɪ/ · v.</i></span><button class="speak" onclick="event.stopPropagation();speak('justify')">🔊</button><div class="def">为……找理由；证明合理。justification 是名词。</div><div class="ex">例：Don’t justify it. Just look at what you did.</div></div>
+        </div></details>
+        <div class="diagram"><svg viewBox="0 0 560 150"><rect x="10" y="20" width="160" height="60" rx="12" fill="#fff" stroke="#0f766e"/><text x="90" y="48" text-anchor="middle" font-size="13" font-weight="700" fill="#0f766e">WORDS 说的话</text><text x="90" y="66" text-anchor="middle" font-size="11" fill="#6b7280">“我想改变”</text><path d="M170 50 H210" stroke="#c2410c" stroke-width="3"/><text x="190" y="38" text-anchor="middle" font-size="16">≠</text><rect x="220" y="20" width="160" height="60" rx="12" fill="#fff" stroke="#c2410c"/><text x="300" y="48" text-anchor="middle" font-size="13" font-weight="700" fill="#c2410c">ACTIONS 做的事</text><text x="300" y="66" text-anchor="middle" font-size="11" fill="#6b7280">刷手机 / 拖延 / 留在原地</text><path d="M380 50 H420" stroke="#0f766e" stroke-width="3" marker-end="url(#a)"/><rect x="430" y="20" width="120" height="60" rx="12" fill="#0f766e"/><text x="490" y="48" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">REAL GOAL</text><text x="490" y="66" text-anchor="middle" font-size="11" fill="#d1fae5">真正的目标</text><defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#0f766e"/></marker></defs></svg><figcaption>图：语言会骗人，行动不会。看行动，才能看到真正的目标。</figcaption></div>
+        <label class="check"><input type="checkbox" class="done" data-ch="c2"><span><b>我读完了第 2 章。</b><span class="en"> I finished Chapter 2.</span></span></label>
+      </section>
+
+      <!-- CHAPTER 3 -->
+      <section class="chapter" id="c3">
+        <div class="num">Chapter 03 · 身份受到威胁时</div>
+        <h2>你不是不想变，你是害怕变<span class="en-title">Fear keeps your old identity alive</span></h2>
+        <div class="idea"><b>一句话核心：</b><span class="en"> Identity forms in a loop: goal → attention → action → habit → “this is who I am” → defending it. To change, break the loop between habit and defence.</span><span class="zh"> 身份是这样形成的：目标 → 注意力 → 行动 → 习惯 → “我就是这种人” → 拼命维护它。想改变，就要在“习惯”和“维护”之间打断这个循环。</span></div>
+        <div class="para"><p class="en">As a child, you needed your parents to survive, so you learned to act in ways they approved of. Later, you also need a social identity that other people respect. So you hold on to labels — a job title, a belief, a group — as if your life depends on it.</p><p class="zh">小时候，你需要父母才能生存，所以你学会按他们认可的方式行动。长大后，你还需要一个受人尊重的社会身份。于是你紧紧抓住各种标签 —— 职业、信仰、圈子 —— 好像命都系在上面。</p></div>
+        <div class="para"><p class="en">That is why a challenge to your identity can feel like a physical threat. Your body goes into fight-or-flight, and you defend yourself instead of listening. The same feeling appears when you try to change: the old identity fights to stay alive.</p><p class="zh">所以，当身份受到挑战时，感觉就像身体受到威胁一样。你会进入“战斗或逃跑”模式，急着反驳，而不是倾听。想改变时也一样：旧身份会拼命挣扎着活下去。</p></div>
+        <div class="diagram"><svg viewBox="0 0 560 210"><g font-size="12" fill="#374151"><rect x="200" y="8" width="160" height="36" rx="18" fill="#fff" stroke="#c2410c"/><text x="280" y="31" text-anchor="middle" font-weight="700">① GOAL 目标</text><rect x="380" y="80" width="160" height="36" rx="18" fill="#fff" stroke="#0f766e"/><text x="460" y="103" text-anchor="middle" font-weight="700">③ ACT 行动</text><rect x="200" y="160" width="160" height="36" rx="18" fill="#fff" stroke="#0f766e"/><text x="280" y="183" text-anchor="middle" font-weight="700">⑤ HABIT 习惯</text><rect x="20" y="80" width="160" height="36" rx="18" fill="#fef3c7" stroke="#b45309"/><text x="100" y="103" text-anchor="middle" font-weight="700">⑦ DEFEND 维护身份 ⚠</text><text x="280" y="130" text-anchor="middle" font-size="12" fill="#6b7280">② 注意你想看的东西 → ④ 得到反馈 → ⑥ “我就是这种人”</text><text x="280" y="152" text-anchor="middle" font-size="12" fill="#b45309">▲ 在这里打断循环：先质疑，再行动</text></g></svg><figcaption>图：身份循环。改变的关键一步不是更努力，而是停止无条件维护旧身份。</figcaption></div>
+        <details class="vocab"><summary>🔑 本章重点词</summary><div class="vocab-list">
+          <div class="vword" onclick="this.classList.toggle('open')"><span class="w">conditioning <i>· n.</i></span><button class="speak" onclick="event.stopPropagation();speak('conditioning')">🔊</button><div class="def">条件反射式的习惯养成；长期训练形成的行为模式。</div><div class="ex">例：Years of conditioning made it automatic.</div></div>
+          <div class="vword" onclick="this.classList.toggle('open')"><span class="w">fight-or-flight <i>· phrase</i></span><button class="speak" onclick="event.stopPropagation();speak('fight or flight')">🔊</button><div class="def">战斗或逃跑反应：感到威胁时身体的本能反应。</div><div class="ex">例：Criticism put him in fight-or-flight mode.</div></div>
+          <div class="vword" onclick="this.classList.toggle('open')"><span class="w">conform <i>/kənˈfɔːrm/ · v.</i></span><button class="speak" onclick="event.stopPropagation();speak('conform')">🔊</button><div class="def">顺从；迎合；遵守（规则/期待）。</div><div class="ex">例：As a kid, I conformed to fit in.</div></div>
+          <div class="vword" onclick="this.classList.toggle('open')"><span class="w">psychological <i>· adj.</i></span><button class="speak" onclick="event.stopPropagation();speak('psychological')">🔊</button><div class="def">心理上的。psychology = 心理学。</div><div class="ex">例：It was a psychological need, not a physical one.</div></div>
+        </div></details>
+        <label class="check"><input type="checkbox" class="done" data-ch="c3"><span><b>我读完了第 3 章。</b><span class="en"> I finished Chapter 3.</span></span></label>
+      </section>
+
+      <!-- CHAPTER 4 -->
+      <section class="chapter" id="c4">
+        <div class="num">Chapter 04 · 心智成长地图</div>
+        <h2>你想要的人生，藏在更高一层的心智里<span class="en-title">Your mind grows in stages — and you can climb</span></h2>
+        <div class="idea"><b>一句话核心：</b><span class="en"> The mind grows through stages, from reacting on impulse to seeing identity itself as flexible. You move up by taking in new ideas that change your goals.</span><span class="zh"> 心智是分阶段成长的：从凭冲动反应，到能把身份本身看作可以调整的东西。吸收能改变目标的新信息，你就能往上走。</span></div>
+        <div class="para"><p class="en">A baby absorbs almost any belief. As we grow, our beliefs harden. Many thinkers have mapped this growth — Maslow, Graves, and others. The author simplifies their models into nine stages, from impulsive to unitive.</p><p class="zh">婴儿几乎吸收任何信念。长大后，信念慢慢变硬。很多思想家都画过这张成长地图 —— 马斯洛、格雷夫斯等人。作者把它们简化成九个阶段，从“冲动”到“合一”。</p></div>
+        <div class="diagram"><svg viewBox="0 0 560 300"><g font-size="12"><rect x="40" y="12" width="480" height="26" rx="8" fill="#ecfdf5"/><text x="280" y="30" text-anchor="middle">9 · Unitive 合一 — 工作、休息、玩乐是一回事</text><rect x="40" y="44" width="480" height="26" rx="8" fill="#ecfdf5"/><text x="280" y="62" text-anchor="middle">8 · Construct-Aware 觉察建构 — 身份像外套，可以脱下</text><rect x="40" y="76" width="480" height="26" rx="8" fill="#eff6ff"/><text x="280" y="94" text-anchor="middle">7 · Strategist 战略家 — 在系统里工作，也看到自己的偏见</text><rect x="40" y="108" width="480" height="26" rx="8" fill="#eff6ff"/><text x="280" y="126" text-anchor="middle">6 · Individualist 个体主义者 — 原则也受环境影响</text><rect x="40" y="140" width="480" height="26" rx="8" fill="#fff7ed"/><text x="280" y="158" text-anchor="middle">5 · Conscientious 尽责者 — 按自己的原则生活 ★ 大多数人从这里起步改变</text><rect x="40" y="172" width="480" height="26" rx="8" fill="#fff7ed"/><text x="280" y="190" text-anchor="middle">4 · Self-Aware 自觉 — 发现内心和外表不一致</text><rect x="40" y="204" width="480" height="26" rx="8" fill="#fef2f2"/><text x="280" y="222" text-anchor="middle">3 · Conformist 顺从者 — 群体规则就是现实</text><rect x="40" y="236" width="480" height="26" rx="8" fill="#fef2f2"/><text x="280" y="254" text-anchor="middle">2 · Self-Protective 自保者 — 世界很危险，先保护自己</text><rect x="40" y="268" width="480" height="26" rx="8" fill="#fef2f2"/><text x="280" y="286" text-anchor="middle">1 · Impulsive 冲动者 — 冲动 = 行动，没有缓冲</text></g></svg><figcaption>图：九个阶段示意图（作者综合多位思想家的模型简化而成）。大多数读者在 4–8 层之间。</figcaption></div>
+        <div class="para"><p class="en">It does not matter too much which stage you are in now. The way up is the same: learn something new that changes what you want — and keep doing it.</p><p class="zh">你现在在哪一层其实没那么重要。往上走的方法都一样：不断学到能改变目标的新东西，然后一直做下去。</p></div>
+        <details class="vocab"><summary>🔑 本章重点词</summary><div class="vocab-list">
+          <div class="vword" onclick="this.classList.toggle('open')"><span class="w">malleable <i>/ˈmæliəbəl/ · adj.</i></span><button class="speak" onclick="event.stopPropagation();speak('malleable')">🔊</button><div class="def">可塑的；容易被影响、被塑造的。</div><div class="ex">例：A young mind is highly malleable.</div></div>
+          <div class="vword" onclick="this.classList.toggle('open')"><span class="w">crystallize <i>· v.</i></span><button class="speak" onclick="event.stopPropagation();speak('crystallize')">🔊</button><div class="def">（信念）固化、成形；变得固定。</div><div class="ex">例：Over time, beliefs crystallize.</div></div>
+          <div class="vword" onclick="this.classList.toggle('open')"><span class="w">integrate <i>/ˈɪntɪɡreɪt/ · v.</i></span><button class="speak" onclick="event.stopPropagation();speak('integrate')">🔊</button><div class="def">整合；把新信息融入已有的理解中。</div><div class="ex">例：Integrate new ideas, don’t just collect them.</div></div>
+          <div class="vword" onclick="this.classList.toggle('open')"><span class="w">hover between <i>· phrase</i></span><button class="speak" onclick="event.stopPropagation();speak('hover between')">🔊</button><div class="def">徘徊在……之间；处在两者之间。</div><div class="ex">例：I hover between stage 4 and 5.</div></div>
+        </div></details>
+        <label class="check"><input type="checkbox" class="done" data-ch="c4"><span><b>我读完了第 4 章。</b><span class="en"> I finished Chapter 4.</span></span></label>
+      </section>
+
+      <!-- CHAPTER 5 -->
+      <section class="chapter" id="c5">
+        <div class="num">Chapter 05 · 聪明是一种掌舵能力</div>
+        <h2>聪明，就是拿到你想要的人生<span class="en-title">Intelligence is steering toward what you want</span></h2>
+        <div class="idea"><b>一句话核心：</b><span class="en"> Success needs three things: agency (you act), opportunity (a real chance), and intelligence (you steer, learn from feedback, and keep going).</span><span class="zh"> 成功需要三样东西：行动力（你去做）、机会（真实的可能）、智力（你会掌舵、从反馈中学习、坚持下去）。</span></div>
+        <div class="para"><p class="en">The word “cybernetics” comes from a Greek word meaning “to steer.” An intelligent system does five things in a loop: have a goal, act, sense where it is, compare that with the goal, and act again.</p><p class="zh">“控制论（cybernetics）”来自希腊语，意思是“掌舵”。一个智能系统会不断循环做五件事：有目标、行动、感知自己在哪、和目标对比、再行动。</p></div>
+        <div class="diagram"><svg viewBox="0 0 560 200"><g text-anchor="middle" font-size="13" font-weight="700"><circle cx="280" cy="40" r="34" fill="#0f766e"/><text x="280" y="36" fill="#fff">🎯 GOAL</text><text x="280" y="52" fill="#d1fae5" font-size="11">目标</text><circle cx="450" cy="100" r="34" fill="#fff" stroke="#0f766e"/><text x="450" y="96" fill="#0f766e">ACT</text><text x="450" y="112" fill="#6b7280" font-size="11">行动</text><circle cx="280" cy="165" r="34" fill="#fff" stroke="#0f766e"/><text x="280" y="161" fill="#0f766e">SENSE</text><text x="280" y="177" fill="#6b7280" font-size="11">感知</text><circle cx="110" cy="100" r="34" fill="#fff" stroke="#c2410c"/><text x="110" y="96" fill="#c2410c">COMPARE</text><text x="110" y="112" fill="#6b7280" font-size="11">对比</text></g><g stroke="#94a3b8" stroke-width="2" fill="none"><path d="M310 60 Q390 70 420 80"/><path d="M430 130 Q380 155 315 160"/><path d="M245 150 Q170 135 140 118"/><path d="M115 65 Q170 45 245 42"/></g><text x="280" y="105" text-anchor="middle" font-size="12" fill="#6b7280">↻ 不断循环 · 错了就修正，不停下</text></svg><figcaption>图：控制论循环 —— 像船偏离航线后修正方向，像恒温器感知温度后调节。聪明不是一次做对，而是不断修正。</figcaption></div>
+        <div class="para"><p class="en">Low intelligence, in this sense, is getting stuck: you hit a problem, quit, or cannot even see the problem. High intelligence is realising that most problems can be solved if you keep iterating on a long enough timeline.</p><p class="zh">按这个定义，所谓“不够聪明”就是卡住了：遇到问题就放弃，甚至看不到问题。而“聪明”是明白：只要不断迭代、时间足够长，大多数问题都能解决。</p></div>
+        <div class="para"><p class="en">Your mind is like an operating system, and its code is made of goals. For most people, those goals were given to them: go to school, get a job, retire at 65. To grow, reject the default path, set higher goals, and become a deep generalist — someone who learns the general principles behind many fields.</p><p class="zh">你的大脑就像操作系统，它的“代码”就是目标。对大多数人来说，这些目标是别人给的：上学、找工作、65 岁退休。想成长，就要拒绝默认路径，设定更高的目标，成为一个“深度通才” —— 懂得很多领域背后通用原理的人。</p></div>
+        <details class="vocab"><summary>🔑 本章重点词</summary><div class="vocab-list">
+          <div class="vword" onclick="this.classList.toggle('open')"><span class="w">agency <i>/ˈeɪdʒənsi/ · n.</i></span><button class="speak" onclick="event.stopPropagation();speak('agency')">🔊</button><div class="def">行动力；主动作为的能力。have agency = 能主动影响结果。</div><div class="ex">例：Agency means you act instead of waiting.</div></div>
+          <div class="vword" onclick="this.classList.toggle('open')"><span class="w">iterate <i>/ˈɪtəreɪt/ · v.</i></span><button class="speak" onclick="event.stopPropagation();speak('iterate')">🔊</button><div class="def">迭代；重复改进。iteration 是名词。</div><div class="ex">例：Iterate: try, learn, adjust, repeat.</div></div>
+          <div class="vword" onclick="this.classList.toggle('open')"><span class="w">steer <i>/stɪər/ · v.</i></span><button class="speak" onclick="event.stopPropagation();speak('steer')">🔊</button><div class="def">掌舵；引导方向。也可指开车、开船。</div><div class="ex">例：Steer your life like you steer a ship.</div></div>
+          <div class="vword" onclick="this.classList.toggle('open')"><span class="w">generalist <i>· n.</i></span><button class="speak" onclick="event.stopPropagation();speak('generalist')">🔊</button><div class="def">通才；涉猎广泛的人。反义词 specialist（专家）。</div><div class="ex">例：A deep generalist connects ideas across fields.</div></div>
+        </div></details>
+        <label class="check"><input type="checkbox" class="done" data-ch="c5"><span><b>我读完了第 5 章。</b><span class="en"> I finished Chapter 5.</span></span></label>
+      </section>
+
+      <!-- CHAPTER 6 -->
+      <section class="chapter" id="c6">
+        <div class="num">Chapter 06 · 一日重启计划 · 核心方法</div>
+        <h2>用一天时间，挖出你真正想要的人生<span class="en-title">The one-day protocol: dig, interrupt, synthesise</span></h2>
+        <div class="idea"><b>一句话核心：</b><span class="en"> Change often comes in three steps: dissonance (you feel you do not belong in this life), uncertainty (you do not know what is next), discovery (you find what to pursue).</span><span class="zh"> 改变常常分三步：失调（觉得现在的生活不属于自己）、不确定（不知道接下来是什么）、发现（找到值得追求的方向）。</span></div>
+        <div class="para"><p class="en">The best changes in the author’s life came after he felt completely fed up with no progress. The tool for that moment is questioning — not copying answers from the internet, but asking questions that are worth asking.</p><p class="zh">作者说，他人生中最好的变化，都发生在对“毫无进展”彻底受够了之后。那一刻的工具就是提问 —— 不是从网上复制答案，而是问真正值得问的问题。</p></div>
+        <div class="exercise"><h4>🌅 上午 · 心理挖掘（15–30 分钟，拿出纸笔）</h4>
+          <p class="en">First, look at the pain. Then build the vision. Do not start with the vision — without pain, the vision stays shallow.</p><p class="zh">先看清痛苦，再建立愿景。不要先写愿景 —— 没有痛苦打底，愿景会很浅。</p>
+          <p><b>① 反愿景（Anti-vision）— 诚实回答：</b><br>· 哪种每天都在、你已经习惯了的小不满？<br>· 你反复抱怨、却从不改变的三件事是什么？<br>· 如果只看你的行为（不听你说的话），别人会觉得你真正想要什么？<br>· 如果五年、十年什么都不变，一个普通的星期二会是什么样？到人生尽头回头看，你失去了什么再也拿不回来的东西？</p>
+          <p><b>② 愿景（Vision）— 暂时忘了“现不现实”：</b><br>· 如果打个响指，三个月后过上另一种生活，那会是什么样？同样具体到一个星期二。<br>· 要相信什么，你才会觉得那种生活很自然？写一句 “I am the type of person who …”。<br>· 如果你已经是那个人，这周会做的一件事是什么？</p>
+        </div>
+        <div class="exercise"><h4>☀️ 白天 · 打断自动驾驶</h4>
+          <p class="en">Journaling alone is not enough. Set alarms through the day. When one rings, stop and ask one question. Put them where autopilot lives: commuting, meetings, scrolling.</p><p class="zh">光写日记不够。白天设几个闹钟，一响就停下来问自己一个问题。把它们放在“自动驾驶”最常出现的地方：通勤、开会、刷手机时。</p>
+          <div class="alarm-grid">
+            <div class="alarm"><b>11:00</b><br><span class="en">What am I avoiding right now?</span><br><span class="zh">我现在在逃避什么？</span></div>
+            <div class="alarm"><b>13:30</b><br><span class="en">If someone filmed the last two hours, what would they think I want?</span><br><span class="zh">如果有人拍下过去两小时，会觉得我想要什么？</span></div>
+            <div class="alarm"><b>15:15</b><br><span class="en">Am I moving toward the life I hate, or the life I want?</span><br><span class="zh">我在走向讨厌的生活，还是想要的生活？</span></div>
+            <div class="alarm"><b>17:00</b><br><span class="en">What important thing am I pretending is not important?</span><br><span class="zh">我在假装什么重要的事不重要？</span></div>
+            <div class="alarm"><b>19:30</b><br><span class="en">What did I do today to protect my identity, not from real desire?</span><br><span class="zh">今天哪些事是为了维护身份，而不是真心想做？</span></div>
+            <div class="alarm"><b>21:00</b><br><span class="en">When did I feel most alive today? Most dead?</span><br><span class="zh">今天什么时候最有活力？什么时候最像“死掉”？</span></div>
+          </div>
+        </div>
+        <div class="exercise"><h4>🌙 晚上 · 综合洞察，定下目标</h4>
+          <p class="en">Write down your one insight. Name the real enemy — not people or circumstances, but the inner pattern. Then write one sentence for your anti-vision and one for your vision. Finally, use three lenses:</p><p class="zh">写下你今天最大的一个洞察。给真正的敌人起个名字 —— 不是别人或环境，而是内心的那个循环模式。再各用一句话写下反愿景和愿景。最后用三个时间镜头定目标：</p>
+          <p>· <b>1 年：</b><span class="en"> What must be true in one year to know the old pattern is broken?</span><span class="zh"> 一年后怎样才算打破了旧模式？</span><br>· <b>1 个月：</b><span class="en"> What must be true in one month to keep the one-year goal possible?</span><span class="zh"> 一个月后怎样，一年目标才还可能实现？</span><br>· <b>每天：</b><span class="en"> What 2–3 actions would the future you simply do tomorrow?</span><span class="zh"> 未来的你，明天会自然去做的 2–3 件事是什么？</span></p>
+        </div>
+        <details class="vocab"><summary>🔑 本章重点词</summary><div class="vocab-list">
+          <div class="vword" onclick="this.classList.toggle('open')"><span class="w">dissonance <i>/ˈdɪsənəns/ · n.</i></span><button class="speak" onclick="event.stopPropagation();speak('dissonance')">🔊</button><div class="def">失调；不协调感。心里觉得“这不是我的生活”。</div><div class="ex">例：The dissonance grew until I had to change.</div></div>
+          <div class="vword" onclick="this.classList.toggle('open')"><span class="w">autopilot <i>· n.</i></span><button class="speak" onclick="event.stopPropagation();speak('autopilot')">🔊</button><div class="def">自动驾驶模式；无意识地按习惯生活。on autopilot = 靠惯性过日子。</div><div class="ex">例：I lived on autopilot for years.</div></div>
+          <div class="vword" onclick="this.classList.toggle('open')"><span class="w">excavation <i>· n.</i></span><button class="speak" onclick="event.stopPropagation();speak('excavation')">🔊</button><div class="def">挖掘；发掘。psychological excavation = 心理挖掘。</div><div class="ex">例：This is a psychological excavation.</div></div>
+          <div class="vword" onclick="this.classList.toggle('open')"><span class="w">brutal honesty <i>· phrase</i></span><button class="speak" onclick="event.stopPropagation();speak('brutal honesty')">🔊</button><div class="def">毫不留情的诚实； brutal = 残酷的、直白的。</div><div class="ex">例：Answer with brutal honesty.</div></div>
+        </div></details>
+        <label class="check"><input type="checkbox" class="done" data-ch="c6"><span><b>我读完了第 6 章。</b><span class="en"> I finished Chapter 6.</span></span></label>
+      </section>
+
+      <!-- CHAPTER 7 -->
+      <section class="chapter" id="c7">
+        <div class="num">Chapter 07 · 把人生变成游戏</div>
+        <h2>把人生变成一场你想玩的游戏<span class="en-title">Turn your life into a video game</span></h2>
+        <div class="idea"><b>一句话核心：</b><span class="en"> Put your insights into six parts. Together they form a world that pulls your attention toward what moves the needle — like a game pulls a player in.</span><span class="zh"> 把洞察整理成六个部分。它们合起来会形成一个世界，像游戏吸引玩家一样，把你的注意力拉向真正重要的事。</span></div>
+        <div class="diagram"><svg viewBox="0 0 560 260"><g text-anchor="middle" font-size="12" font-weight="700"><circle cx="280" cy="130" r="105" fill="none" stroke="#0f766e" stroke-width="2" stroke-dasharray="6 5"/><circle cx="280" cy="130" r="72" fill="none" stroke="#f59e0b" stroke-width="2"/><circle cx="280" cy="130" r="40" fill="#0f766e"/><text x="280" y="126" fill="#fff">YOU</text><text x="280" y="142" fill="#d1fae5" font-size="10">你</text><text x="280" y="18" fill="#0f766e">🏆 VISION 愿景 = 怎么赢</text><text x="280" y="248" fill="#c2410c">⚠ ANTI-VISION 反愿景 = 输了会怎样</text><text x="88" y="70" fill="#374151">🎯 1 YEAR 任务</text><text x="472" y="70" fill="#374151">👹 1 MONTH Boss 战</text><text x="88" y="205" fill="#374151">⚔ DAILY 任务</text><text x="472" y="205" fill="#374151">📏 RULES 规则</text></g></svg><figcaption>图：六个部分像同心圆一样保护你的注意力 —— 愿景是“赢”，反愿景是“代价”，一年目标是主线任务，一个月项目是 Boss 战，每日行动是支线任务，底线是规则。</figcaption></div>
+        <div class="para"><p class="en">Games are fun because they have a clear win, real stakes, a mission, a boss to beat, daily quests, and rules that force creativity. Your life can have the same structure — if you write it down and live inside it every day.</p><p class="zh">游戏好玩，是因为有明确的赢法、真实的代价、主线任务、要打的 Boss、每日任务和逼你动脑的规则。你的人生也可以有同样的结构 —— 只要你把它写下来，并且每天活在里面。</p></div>
+        <div class="para"><p class="en">The more you play, the stronger the pull becomes. One day, it is no longer a system you follow. It is simply who you are.</p><p class="zh">玩得越多，这股拉力就越强。有一天，它不再是你“遵守的系统”，它就是你本人。</p></div>
+        <details class="vocab"><summary>🔑 本章重点词</summary><div class="vocab-list">
+          <div class="vword" onclick="this.classList.toggle('open')"><span class="w">stake <i>/steɪk/ · n.</i></span><button class="speak" onclick="event.stopPropagation();speak('stake')">🔊</button><div class="def">赌注；利害关系。What’s at stake? = 冒着失去什么的风险？</div><div class="ex">例：Your future is at stake.</div></div>
+          <div class="vword" onclick="this.classList.toggle('open')"><span class="w">quest <i>/kwest/ · n.</i></span><button class="speak" onclick="event.stopPropagation();speak('quest')">🔊</button><div class="def">任务；探索（游戏里常说的支线/主线任务）。</div><div class="ex">例：Today’s quest: write 200 words.</div></div>
+          <div class="vword" onclick="this.classList.toggle('open')"><span class="w">concentric <i>· adj.</i></span><button class="speak" onclick="event.stopPropagation();speak('concentric')">🔊</button><div class="def">同心的；有共同圆心的（像一圈圈涟漪）。</div><div class="ex">例：Concentric circles guard your focus.</div></div>
+          <div class="vword" onclick="this.classList.toggle('open')"><span class="w">synthesise / synthesize <i>· v.</i></span><button class="speak" onclick="event.stopPropagation();speak('synthesize')">🔊</button><div class="def">综合；把零散的洞察整合成一个整体。</div><div class="ex">例：Synthesise today’s insights into one plan.</div></div>
+        </div></details>
+        <label class="check"><input type="checkbox" class="done" data-ch="c7"><span><b>我读完了第 7 章。</b><span class="en"> I finished Chapter 7.</span> 🎉</span></label>
+      </section>
+
+      <!-- VOCAB FLASHCARDS -->
+      <section class="chapter" id="vocab">
+        <div class="num">Vocabulary Lab · 词汇实验室</div>
+        <h2>闪卡：点一点，翻一翻<span class="en-title">Flashcards — tap a card to flip it</span></h2>
+        <p style="color:var(--muted)">下面 9 张是高频词，点卡片翻面看中文。全部 28 个词都在各章的词汇表里。</p>
+        <div class="flash" id="flash"></div>
+        <p><button class="btn" onclick="shuffleFlash()">🔀 洗牌</button> <span style="font-size:13px;color:var(--muted)" id="flashCount"></span></p>
+      </section>
+
+      <!-- QUIZ -->
+      <section class="chapter" id="quiz">
+        <div class="num">Check Yourself · 小测验</div>
+        <h2>读懂了吗？测 6 道题<span class="en-title">Six quick questions — no score is saved</span></h2>
+        <div id="quizBox"></div>
+        <p><b>得分：<span id="score">0 / 6</span></b> <button class="btn" onclick="resetQuiz()">再测一次</button></p>
+      </section>
+
+      <!-- PLAN -->
+      <section class="chapter" id="plan">
+        <div class="num">My One-Day Plan · 我的行动手册</div>
+        <h2>现在，写下你自己的一天<span class="en-title">Write it here — saved only in your browser</span></h2>
+        <p style="color:var(--muted)">不用写得很完美，先写下来。内容只存在你自己的浏览器本地存储里，不会上传。</p>
+        <div class="exercise"><h4>1 · 我的反愿景（一句话）</h4><textarea id="p1" placeholder="I refuse to let my life become… / 我绝不让人生变成……"></textarea>
+        <h4 style="margin-top:14px">2 · 我的愿景（一句话）</h4><textarea id="p2" placeholder="I am building toward… / 我正在走向……"></textarea>
+        <h4 style="margin-top:14px">3 · 新身份：I am the type of person who …</h4><textarea id="p3" placeholder="例如：writes 200 words every morning / 每天早上写 200 词"></textarea>
+        <h4 style="margin-top:14px">4 · 明天要做的 2–3 件小事</h4><textarea id="p4" placeholder="1. …&#10;2. …&#10;3. …"></textarea>
+        <p><button class="btn primary" onclick="downloadPlan()">⬇ 下载我的行动手册 (.txt)</button> <button class="btn" onclick="clearPlan()">清空</button> <span id="savedNote" style="font-size:13px;color:var(--accent2)"></span></p></div>
+        <div class="quote-card">📌 <b>下一步：</b>读完这本指南，回到 <a href="https://x.com/thedankoe/status/2010751592346030461" target="_blank" rel="noopener">X 原文</a> 再读一遍 —— 这次你会发现很多句子突然变简单了。That’s the point of this guide.</div>
+      </section>
+    </main>
+  </div>
+  <footer>
+    <p>学习指南 · Study guide based on Dan Koe’s X Article (13 Jan 2026). 原文链接：<a href="https://x.com/thedankoe/status/2010751592346030461">x.com/thedankoe/status/2010751592346030461</a><br>
+    本页为概括与学习笔记，不转载原文全文；英文释义与例句为本页原创编写。Pure HTML + CSS + JS, no tracking, no external images.<br>
+    Made for English learners · 适合英语学习者阅读</p>
+  </footer>
+</div>
+<script>
+let fontSize=16;
+function speak(t){try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=.85;speechSynthesis.speak(u)}catch(e){}}
+document.querySelectorAll('[data-lang]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-lang]').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.body.className=document.body.className.replace(/lang-\w+/,'').trim();document.body.classList.add('lang-'+b.dataset.lang);save('lang',b.dataset.lang)});
+document.getElementById('fontPlus').onclick=()=>{fontSize=Math.min(21,fontSize+1);document.body.style.fontSize=fontSize+'px'};
+document.getElementById('fontMinus').onclick=()=>{fontSize=Math.max(14,fontSize-1);document.body.style.fontSize=fontSize+'px'};
+document.getElementById('themeBtn').onclick=()=>{if(document.body.classList.contains('dark')){document.body.classList.remove('dark');document.body.classList.add('sepia')}else if(document.body.classList.contains('sepia')){document.body.classList.remove('sepia')}else{document.body.classList.add('dark')}};
+function save(k,v){try{localStorage.setItem('fixlife-'+k,v)}catch(e){}}
+function load(k){try{return localStorage.getItem('fixlife-'+k)}catch(e){return null}}
+const boxes=[...document.querySelectorAll('.done')];
+function updatePct(){const d=boxes.filter(b=>b.checked).length;const p=Math.round(d/boxes.length*100);document.getElementById('pct').textContent=p+'%';document.getElementById('pctBar').style.width=p+'%';save('done',JSON.stringify(boxes.map(b=>b.checked)))}
+boxes.forEach(b=>b.onchange=updatePct);
+try{const s=JSON.parse(load('done')||'[]');boxes.forEach((b,i)=>b.checked=!!s[i])}catch(e){}
+updatePct();
+['p1','p2','p3','p4'].forEach(id=>{const el=document.getElementById(id);el.value=load(id)||'';el.addEventListener('input',()=>{save(id,el.value);document.getElementById('savedNote').textContent='已自动保存 ✓'})});
+function downloadPlan(){const t=['MY ONE-DAY PLAN — 一天重塑人生行动手册','', 'Anti-vision 反愿景: '+(document.getElementById('p1').value||''),'','Vision 愿景: '+(document.getElementById('p2').value||''),'','New identity 新身份: I am the type of person who '+(document.getElementById('p3').value||''),'','Tomorrow 明天要做: '+(document.getElementById('p4').value||''),'','Source 原文: https://x.com/thedankoe/status/2010751592346030461'].join('\n');const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([t],{type:'text/plain'}));a.download='my-one-day-plan.txt';a.click()}
+function clearPlan(){['p1','p2','p3','p4'].forEach(id=>{document.getElementById(id).value='';save(id,'')});document.getElementById('savedNote').textContent='已清空'}
+const FLASH=[['identity','身份；自我认同'],['dissonance','失调；不协调感'],['procrastinate','拖延'],['autopilot','自动驾驶；靠惯性生活'],['agency','行动力'],['iterate','迭代；重复改进'],['unconscious','无意识的'],['move the needle','真正推动进展'],['brutal honesty','毫不留情的诚实']];
+function renderFlash(list){document.getElementById('flash').innerHTML=list.map(([e,z])=>`<div class="card3d" onclick="this.classList.toggle('flipped')"><div class="card3d-in"><div class="face"><b style="font-size:19px">${e}</b><span style="font-size:12px;color:var(--muted)">点我翻面 · tap to flip</span></div><div class="face back"><b>${z}</b></div></div></div>`).join('');document.getElementById('flashCount').textContent='共 '+list.length+' 张'}
+function shuffleFlash(){renderFlash([...FLASH].sort(()=>Math.random()-.5))}
+renderFlash(FLASH);
+const QUIZ=[
+ {q:'According to Chapter 1, what should change first?',o:['Your actions','Your identity','Your job','Your phone'],a:1},
+ {q:'“Trust movement, not words” means…',o:['Listen to what people say','Watch what people actually do','Move your body more','Talk less in meetings'],a:1},
+ {q:'Why do we defend an old identity?',o:['Because it feels like survival','Because we love arguing','Because change is illegal','Because others tell us to'],a:0},
+ {q:'In cybernetics, after you “sense where you are”, what is next?',o:['Quit','Compare with the goal','Forget the goal','Wait for luck'],a:1},
+ {q:'Why should you write the anti-vision BEFORE the vision?',o:['To save paper','Without pain, the vision stays shallow','It is a rule for games','The author likes sad stories'],a:1},
+ {q:'In the “life as a game” map, what is the 1-month project?',o:['The rules','The boss fight','The daily quest','The win'],a:1}];
+let answered={};
+function renderQuiz(){document.getElementById('quizBox').innerHTML=QUIZ.map((item,i)=>`<div class="quiz-q"><b>Q${i+1}. ${item.q}</b>${item.o.map((o,j)=>`<button onclick="answer(${i},${j},this)">${o}</button>`).join('')}</div>`).join('')}
+function answer(i,j,btn){if(answered[i]!==undefined)return;answered[i]=j;const q=btn.parentElement;[...q.querySelectorAll('button')].forEach((b,k)=>{if(k===QUIZ[i].a)b.classList.add('correct');else if(k===j)b.classList.add('wrong')});const s=Object.values(answered).filter((v,k)=>v===QUIZ[k].a).length;document.getElementById('score').textContent=s+' / 6'}
+function resetQuiz(){answered={};renderQuiz();document.getElementById('score').textContent='0 / 6'}
+renderQuiz();
+window.addEventListener('scroll',()=>{const h=document.documentElement;const p=h.scrollTop/(h.scrollHeight-h.clientHeight)*100;document.getElementById('progress').style.width=p+'%'},{passive:true});
+try{const l=load('lang');if(l){document.querySelector(`[data-lang="${l}"]`)?.click()}}catch(e){}
+</script>
+</body>
+</html>
